@@ -16,8 +16,8 @@ import (
 func main() {
 	var serverList string
 	var port int
-	flag.StringVar(&serverList, "backend", "", "Load balanced backends")
-	flag.IntVar(&port, "port", 8080, "Port to listen on")
+	flag.StringVar(&serverList, "backends", "", "Load balanced backends")
+	flag.IntVar(&port, "port", 3030, "Port to listen on")
 	flag.Parse()
 	if len(serverList) == 0 {
 		log.Fatal("No backends specified")
